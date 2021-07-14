@@ -28,7 +28,6 @@ function swiperInit() {
 }
 
 function changeSlide(event) {
-	window.removeEventListener('wheel', mouseWheelHandler);
 	if (!event.target.classList.contains('active') && (event.target.classList.contains('slider-item'))) {
 		event.target.classList.add('active');
 		activeSlide.classList.remove('active');
