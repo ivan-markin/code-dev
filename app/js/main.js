@@ -11,7 +11,6 @@ const closeMenuButton = document.querySelector('.mobile-menu-popup__close');
 const openMenuButton = document.querySelector('.mobile-head__menu-icon');
 
 let activeSlide = document.querySelector('.main-screen');
-let activeSlideTransitionEnd = true;
 let swiper;
 
 function swiperInit() {
@@ -29,7 +28,7 @@ function swiperInit() {
 }
 
 function changeSlide(event) {
-	activeSlideTransitionEnd = false;
+	window.removeEventListener('wheel', mouseWheelHandler);
 	if (!event.target.classList.contains('active') && (event.target.classList.contains('slider-item'))) {
 		event.target.classList.add('active');
 		activeSlide.classList.remove('active');
@@ -40,9 +39,7 @@ function changeSlide(event) {
 		activeSlide.classList.remove('active');
 		activeSlide = event.target.closest('.slider-item');
 	}
-	activeSlide.ontransitionend = () => {
-		activeSlideTransitionEnd = true;
-	}
+	setTimeout(() => window.addEventListener('wheel', mouseWheelHandler, {once: true}), 1000)
 }
 
 function sliderInit() {
@@ -108,18 +105,13 @@ function setCustomCSSProperty() {
 }
 
 function mouseWheelHandler(evt) {
-	if (Math.abs(evt.deltaY) > 100 || Math.abs(evt.deltaY) < 3){
-		return;
-	}
-	if (!activeSlideTransitionEnd){
-		return;
-	}
+	let delta = Math.max(-1, Math.min(1, (evt.wheelDelta || -evt.detail)));
 	let activeSlideIndex = [...slides].findIndex(slide => slide.classList.contains('active'));
 	const isActiveFirst = () => activeSlideIndex === 0;
 	const isActiveLast = () => activeSlideIndex === slides.length - 1;
 	[...slides]
 		.find((slide, index) =>
-			index === (evt.wheelDelta >= 0 ?
+			index === (delta === 1 ?
 			(isActiveLast() ? 0 : activeSlideIndex + 1) :
 			(isActiveFirst() ? slides.length - 1 : activeSlideIndex - 1)))
 		.click();
@@ -159,4 +151,4 @@ window.addEventListener('resize', () => {
 	swiperInit();
 });
 
-window.addEventListener('wheel', mouseWheelHandler);
+window.addEventListener('wheel', mouseWheelHandler, {once: true});
