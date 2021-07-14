@@ -102,9 +102,19 @@ function setCustomCSSProperty() {
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
+function mouseWheelHandler(evt) {
+	let activeSlideIndex = [...slides].findIndex(slide => slide.classList.contains('active'));
+	const isActiveFirst = () => activeSlideIndex === 0;
+	const isActiveLast = () => activeSlideIndex === slides.length - 1;
+	[...slides]
+		.find((slide, index) =>
+			index === (evt.wheelDelta >= 0 ?
+			(isActiveLast() ? 0 : activeSlideIndex + 1) :
+			(isActiveFirst() ? slides.length - 1 : activeSlideIndex - 1)))
+		.click();
+}
 
 // Event listeners
-
 mosaicToggleElements.forEach((element) => {
 	element.addEventListener('mouseover', (event) => {
 		event.target.closest('.slider-item').querySelector('.slider-item__mosaic').style.opacity = '0';
@@ -137,3 +147,5 @@ window.addEventListener('resize', () => {
 	sliderInit();
 	swiperInit();
 });
+
+window.addEventListener('wheel', mouseWheelHandler);
