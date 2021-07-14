@@ -1,0 +1,26 @@
+.temporary-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	flex: auto;
+	padding-bottom: 75px;
+
+	& p {
+		font-size: 14px;
+		text-transform: uppercase;
+		font-weight: 300;
+		margin: 0 0 5px 0;
+	}
+
+	& h1 {
+		font-size: 42px;
+		font-weight: 300;
+		text-transform: uppercase;
+		line-height: 1;
+		margin: 0;
+	}
+
+	& span {
+		color: #F94822;
+	}
+}

@@ -108,10 +108,10 @@ function setCustomCSSProperty() {
 }
 
 function mouseWheelHandler(evt) {
-	if (Math.abs(evt.deltaY) > 100 || Math.abs(evt.deltaY) < 3){
+	if (Math.abs(evt.deltaY) > 100 || Math.abs(evt.deltaY) < 3) {
 		return;
 	}
-	if (!activeSlideTransitionEnd){
+	if (!activeSlideTransitionEnd) {
 		return;
 	}
 	let activeSlideIndex = [...slides].findIndex(slide => slide.classList.contains('active'));
@@ -120,8 +120,8 @@ function mouseWheelHandler(evt) {
 	[...slides]
 		.find((slide, index) =>
 			index === (evt.wheelDelta >= 0 ?
-			(isActiveLast() ? 0 : activeSlideIndex + 1) :
-			(isActiveFirst() ? slides.length - 1 : activeSlideIndex - 1)))
+				(isActiveLast() ? 0 : activeSlideIndex + 1) :
+				(isActiveFirst() ? slides.length - 1 : activeSlideIndex - 1)))
 		.click();
 }
 
@@ -135,15 +135,19 @@ mosaicToggleElements.forEach((element) => {
 	})
 })
 
-playButton.addEventListener('click', () => {
-	videoElement.play();
-	openVideoPopup();
-})
+if (playButton) {
+	playButton.addEventListener('click', () => {
+		videoElement.play();
+		openVideoPopup();
+	})
+}
 
-closeVideoButton.addEventListener('click', () => {
-	closeVideoPopup();
-	stopVideo();
-})
+if (closeVideoButton) {
+	closeVideoButton.addEventListener('click', () => {
+		closeVideoPopup();
+		stopVideo();
+	})
+}
 
 openMenuButton.addEventListener('click', openMobileMenu);
 
@@ -159,4 +163,4 @@ window.addEventListener('resize', () => {
 	swiperInit();
 });
 
-window.addEventListener('wheel', mouseWheelHandler);
+// window.addEventListener('wheel', mouseWheelHandler);
