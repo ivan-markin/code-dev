@@ -11,6 +11,7 @@ const closeMenuButton = document.querySelector('.mobile-menu-popup__close');
 const openMenuButton = document.querySelector('.mobile-head__menu-icon');
 
 let activeSlide = document.querySelector('.main-screen');
+let activeSlideTransitionEnd = true;
 let swiper;
 
 function swiperInit() {
@@ -28,6 +29,7 @@ function swiperInit() {
 }
 
 function changeSlide(event) {
+	activeSlideTransitionEnd = false;
 	if (!event.target.classList.contains('active') && (event.target.classList.contains('slider-item'))) {
 		event.target.classList.add('active');
 		activeSlide.classList.remove('active');
@@ -37,6 +39,9 @@ function changeSlide(event) {
 		event.target.closest('.slider-item').classList.add('active');
 		activeSlide.classList.remove('active');
 		activeSlide = event.target.closest('.slider-item');
+	}
+	activeSlide.ontransitionend = () => {
+		activeSlideTransitionEnd = true;
 	}
 }
 
@@ -103,6 +108,12 @@ function setCustomCSSProperty() {
 }
 
 function mouseWheelHandler(evt) {
+	if (Math.abs(evt.deltaY) > 100 || Math.abs(evt.deltaY) < 3){
+		return;
+	}
+	if (!activeSlideTransitionEnd){
+		return;
+	}
 	let activeSlideIndex = [...slides].findIndex(slide => slide.classList.contains('active'));
 	const isActiveFirst = () => activeSlideIndex === 0;
 	const isActiveLast = () => activeSlideIndex === slides.length - 1;
