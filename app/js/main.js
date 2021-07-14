@@ -38,7 +38,7 @@ function changeSlide(event) {
 		activeSlide.classList.remove('active');
 		activeSlide = event.target.closest('.slider-item');
 	}
-	setTimeout(() => window.addEventListener('wheel', mouseWheelHandler, {once: true}), 1000)
+	setTimeout(() => window.addEventListener('wheel', mouseWheelHandler, { once: true }), 1000)
 }
 
 function sliderInit() {
@@ -111,8 +111,8 @@ function mouseWheelHandler(evt) {
 	[...slides]
 		.find((slide, index) =>
 			index === (delta === 1 ?
-			(isActiveLast() ? 0 : activeSlideIndex + 1) :
-			(isActiveFirst() ? slides.length - 1 : activeSlideIndex - 1)))
+				(isActiveLast() ? 0 : activeSlideIndex + 1) :
+				(isActiveFirst() ? slides.length - 1 : activeSlideIndex - 1)))
 		.click();
 }
 
@@ -126,15 +126,19 @@ mosaicToggleElements.forEach((element) => {
 	})
 })
 
-playButton.addEventListener('click', () => {
-	videoElement.play();
-	openVideoPopup();
-})
+if (playButton) {
+	playButton.addEventListener('click', () => {
+		videoElement.play();
+		openVideoPopup();
+	})
+}
 
-closeVideoButton.addEventListener('click', () => {
-	closeVideoPopup();
-	stopVideo();
-})
+if (closeVideoButton) {
+	closeVideoButton.addEventListener('click', () => {
+		closeVideoPopup();
+		stopVideo();
+	})
+}
 
 openMenuButton.addEventListener('click', openMobileMenu);
 
@@ -150,4 +154,4 @@ window.addEventListener('resize', () => {
 	swiperInit();
 });
 
-window.addEventListener('wheel', mouseWheelHandler, {once: true});
+window.addEventListener('wheel', mouseWheelHandler, { once: true });
