@@ -111,8 +111,8 @@ function mouseWheelHandler(evt) {
 	[...slides]
 		.find((slide, index) =>
 			index === (delta === 1 ?
-				(isActiveLast() ? 0 : activeSlideIndex + 1) :
-				(isActiveFirst() ? slides.length - 1 : activeSlideIndex - 1)))
+				(isActiveFirst() ? slides.length - 1 : activeSlideIndex - 1) :
+				(isActiveLast() ? 0 : activeSlideIndex + 1)))
 		.click();
 }
 
