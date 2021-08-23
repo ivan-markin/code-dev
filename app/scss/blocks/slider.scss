@@ -54,10 +54,10 @@
 		}
 
 		&.active {
-			flex-basis: calc(100% - 400px);			
+			flex-basis: calc(100% - 700px);			
 
 			@media (max-width: 1200px) {
-				flex-basis: calc(100% - 360px);
+				flex-basis: calc(100% - 630px);
 			}
 			
 			@media (max-width: 768px) {
