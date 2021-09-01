@@ -243,13 +243,17 @@
 			}
 
 			&-name {
-				font-size: 82px;
+				font-size: 64px;
 				font-weight: 300;
 				line-height: 1;
-				margin-right: 24px;
+				margin-right: 10px;
 
-				@media (max-width: 1200px) {
+				@media (max-width: 1366px) {
 					font-size: 60px;
+				}
+				
+				@media (max-width: 1200px) {
+					font-size: 56px;
 				}
 
 				@media (max-width: 768px) {
@@ -259,10 +263,14 @@
 				@media (max-width: 560px) {
 					font-size: 36px;
 				}
+
+				@media (max-width: 420px) {
+					font-size: 30px;
+				}
 			}
 
 			&-company {
-				font-size: 48px;
+				font-size: 36px;
 				font-weight: 300;
 				line-height: 1;
 
@@ -316,15 +324,18 @@
 			height: calc(var(--vh, 1vh) * 30);
 			padding-left: 85px;
 
-			@media (max-width: 1200px) {
+			// @media (max-width: 1200px) {
+			// 	flex-direction: column;
+			// 	align-items: flex-start;
+			// 	height: 40vh;
+			// 	height: calc(var(--vh, 1vh) * 40);
+			// }
+
+			@media (max-width: 1200px) {				
 				flex-direction: column;
 				align-items: flex-start;
-				height: 40vh;
-				height: calc(var(--vh, 1vh) * 40);
-			}
-
-			@media (max-width: 1024px) {				
 				height: auto;
+				height: calc(var(--vh, 1vh) * 75);
 				padding-left: 0;
 			}
 
@@ -352,20 +363,37 @@
 			}
 		}
 
+		&__parameters-block {
+			display: flex;
+
+			@media (max-width: 1440px) {
+				flex-direction: column;
+				margin-right: 40px;
+			}
+
+			@media (max-width: 1200px) {				
+				margin-right: 0;
+				margin-bottom: 30px;
+			}
+		}
+		
 		&__parameters {
 			display: flex;
 			flex-direction: column;
 			margin-right: 50px;
 
-			@media (max-width: 1200px) {
+			@media (max-width: 1440px) {
 				margin-right: 0;
-				margin-bottom: 30px;
+				
+				&:not(:last-of-type) {
+					margin-bottom: 30px;
+				}
 			}
 			
 			@media (max-width: 560px) {				
 				margin-bottom: 20px;
-			}	
-
+			}				
+			
 			& .name {
 				font-size: 10px;
 				font-weight: 300;
