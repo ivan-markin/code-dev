@@ -17,7 +17,7 @@ function swiperInit() {
 	if (window.matchMedia('(max-width: 768px)').matches) {
 
 		swiper = new Swiper('.swiper-container', {
-			loop: false,
+			loop: true,
 			grabCursor: true,
 			spaceBetween: 0,
 		});
@@ -104,6 +104,9 @@ function setCustomCSSProperty() {
 }
 
 function toggleSlideHandler(condition) {
+	if (swiper){
+		swiper[condition ? 'slideNext' : 'slidePrev'](300)
+	}
 	let activeSlideIndex = [...slides].findIndex(slide => slide.classList.contains('active'));
 	const isActiveFirst = () => activeSlideIndex === 0;
 	const isActiveLast = () => activeSlideIndex === slides.length - 1;
