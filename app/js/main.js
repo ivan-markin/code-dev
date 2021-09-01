@@ -103,17 +103,44 @@ function setCustomCSSProperty() {
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
-function mouseWheelHandler(evt) {
-	let delta = Math.max(-1, Math.min(1, (evt.wheelDelta || -evt.detail)));
+function toggleSlideHandler(condition) {
 	let activeSlideIndex = [...slides].findIndex(slide => slide.classList.contains('active'));
 	const isActiveFirst = () => activeSlideIndex === 0;
 	const isActiveLast = () => activeSlideIndex === slides.length - 1;
 	[...slides]
 		.find((slide, index) =>
-			index === (delta === 1 ?
+			index === (condition ?
 				(isActiveFirst() ? slides.length - 1 : activeSlideIndex - 1) :
 				(isActiveLast() ? 0 : activeSlideIndex + 1)))
 		.click();
+}
+
+function mouseWheelHandler(evt) {
+	let delta = Math.max(-1, Math.min(1, (evt.wheelDelta || -evt.detail)));
+	toggleSlideHandler(delta === 1);
+}
+
+//swipe event handler
+let xDown = null;
+let yDown = null;
+
+function handleTouchStart(evt) {
+	const firstTouch = evt.touches[0];
+	xDown = firstTouch.clientX;
+	yDown = firstTouch.clientY;
+}
+
+function handleTouchMove(evt) {
+	if (!xDown || !yDown) {
+		return;
+	}
+	const xUp = evt.touches[0].clientX;
+	const yUp = evt.touches[0].clientY;
+	const xDiff = xDown - xUp;
+	const yDiff = yDown - yUp;
+	toggleSlideHandler(Math.abs(xDiff) < Math.abs(yDiff) && yDiff > 0);
+	xDown = null;
+	yDown = null;
 }
 
 // Event listeners
@@ -153,5 +180,6 @@ window.addEventListener('resize', () => {
 	sliderInit();
 	swiperInit();
 });
-
+document.addEventListener('touchstart', handleTouchStart, false);
+document.addEventListener('touchmove', handleTouchMove, false);
 window.addEventListener('wheel', mouseWheelHandler, { once: true });
