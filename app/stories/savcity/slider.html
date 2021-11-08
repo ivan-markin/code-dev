@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+	<title>Document</title>
+</head>
+
+<body>
+	<style>
+		body {
+			width: 100%;
+			color: #fff;
+		}
+
+		.slide {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: fit-content;
+			box-sizing: border-box;
+			width: 100%;
+			padding: 0 20px;
+		}
+
+		.slide::-webkit-scrollbar {
+			display: none;
+		}
+
+		.pagination {
+			position: static;
+			margin-top: 20px;
+		}
+
+		.swiper-pagination-bullet-active {
+			background-color: #fff;
+		}
+	</style>
+
+	<div class="swiper">
+		<div class="swiper-wrapper">
+			<div class="slide swiper-slide">
+				<img src="./assets/blueprint-4.png" width="191" height="431" alt="">
+			</div>
+			<div class="slide swiper-slide">
+				<img src="./assets/blueprint-4.png" width="191" height="431" alt="">
+			</div>
+		</div>
+
+		<div class="pagination swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.swiper', {
+			pagination: {
+				el: '.swiper-pagination',
+			}
+		});
+	</script>
+</body>
+
+</html>
