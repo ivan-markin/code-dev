@@ -7,6 +7,15 @@
 	}
 }
 
+@keyframes arrow-animate {
+	0% {
+		transform: translateX(15px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
 .slider {
 	height: 100vh;
 	height: calc(var(--vh, 1vh) * 100);	
@@ -44,7 +53,7 @@
 			flex-basis: 90px;
 		}
 		
-		@media (max-width: 768px) {
+		@media (max-width: 1015px) {
 			flex-basis: auto;
 		}
 
@@ -60,7 +69,7 @@
 				flex-basis: calc(100% - 630px);
 			}
 			
-			@media (max-width: 768px) {
+			@media (max-width: 1015px) {
 				flex-basis: auto;
 			}
 		}
@@ -89,7 +98,7 @@
 				left: 30px;
 			}
 
-			@media (max-width: 768px) {
+			@media (max-width: 1015px) {
 				display: none;
 			}
 			
@@ -152,7 +161,7 @@
 			opacity: .3;
 			z-index: 5;
 
-			@media (max-width: 768px) {
+			@media (max-width: 1015px) {
 				opacity: .5;
 			}
 		}
@@ -168,7 +177,7 @@
 			opacity: 1;				
 			transition: all 1.5s;	
 			
-			@media (max-width: 768px) {
+			@media (max-width: 1015px) {
 				display: block;
 			}
 			
@@ -210,7 +219,7 @@
 				justify-content: flex-start;
 			}
 
-			@media (max-width: 768px) {
+			@media (max-width: 1015px) {
 				display: flex;
 			}
 
@@ -237,7 +246,7 @@
 			animation-play-state: paused;
 			animation-iteration-count: 1;
 
-			@media (max-width: 768px) {
+			@media (max-width: 1015px) {
 				transform: none;
 				animation: none;
 			}
@@ -256,7 +265,7 @@
 					font-size: 56px;
 				}
 
-				@media (max-width: 768px) {
+				@media (max-width: 1015px) {
 					font-size: 48px;
 				}
 
@@ -339,7 +348,7 @@
 				padding-left: 0;
 			}
 
-			@media (max-width: 768px) {
+			@media (max-width: 1015px) {
 				padding-left: 0;
 				height: auto;
 			}
@@ -352,13 +361,22 @@
 				text-transform: uppercase;
 				color: white;
 				text-decoration: none;
-				height: fit-content;
-				background: url('../../images/link-arrow.svg') no-repeat left center;				
+				height: fit-content;				
 				transition: all .5s;
+				cursor: pointer;
 				padding: 15px 0 15px 84px;	
-				
-				&:hover {
-					background-position-x: 10px;
+
+				&::before {
+					content: '';
+					display: block;
+					width: 65px;
+					height: 25px;
+					background: url('../../images/link-arrow.svg') no-repeat;
+					background-size: contain;
+					position: absolute;
+					left: 0;
+					top: 9px;
+					animation: arrow-animate 1s ease infinite alternate;					
 				}
 			}
 		}
