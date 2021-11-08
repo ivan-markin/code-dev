@@ -186,3 +186,28 @@ window.addEventListener('resize', () => {
 document.addEventListener('touchstart', handleTouchStart, false);
 document.addEventListener('touchmove', handleTouchMove, false);
 window.addEventListener('wheel', mouseWheelHandler, { once: true });
+disableScroll(window);
+
+function disableScroll(el) {
+	el.addEventListener('touchstart', function() {
+		let top = el.scrollTop
+			, totalScroll = el.scrollHeight
+			, currentScroll = top + el.offsetHeight
+
+		if(top === 0) {
+			el.scrollTop = 1
+		} else if(currentScroll === totalScroll) {
+			el.scrollTop = top - 1
+		}
+	})
+	el.addEventListener('touchmove', function(evt) {
+		if(el.offsetHeight < el.scrollHeight)
+			evt._isScroller = true
+	})
+}
+
+document.body.addEventListener('touchmove', function(evt) {
+	if(!evt._isScroller) {
+		evt.preventDefault()
+	}
+}, {passive: false})
