@@ -14,7 +14,7 @@ let activeSlide = document.querySelector('.main-screen');
 let swiper;
 
 function swiperInit() {
-	if (window.matchMedia('(max-width: 768px)').matches) {
+	if (window.matchMedia('(max-width: 1015px)').matches) {
 
 		swiper = new Swiper('.swiper-container', {
 			loop: true,
@@ -42,7 +42,7 @@ function changeSlide(event) {
 }
 
 function sliderInit() {
-	if (window.matchMedia('(min-width: 769px)').matches) {
+	if (window.matchMedia('(min-width: 1016px)').matches) {
 		slides.forEach(slide => {
 			slide.addEventListener('click', changeSlide)
 		})
@@ -104,7 +104,7 @@ function setCustomCSSProperty() {
 }
 
 function toggleSlideHandler(condition) {
-	if (swiper){
+	if (swiper) {
 		swiper[condition ? 'slideNext' : 'slidePrev'](300)
 	}
 	let activeSlideIndex = [...slides].findIndex(slide => slide.classList.contains('active'));
