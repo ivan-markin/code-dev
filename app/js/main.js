@@ -38,7 +38,7 @@ function changeSlide(event) {
 		activeSlide.classList.remove('active');
 		activeSlide = event.target.closest('.slider-item');
 	}
-	setTimeout(window.addEventListener.bind(this, 'wheel', mouseWheelHandler, { once: true }), 1000)
+	setTimeout(window.addEventListener.bind(null, 'wheel', mouseWheelHandler, { once: true }), 1500)
 }
 
 function sliderInit() {
