@@ -21,7 +21,6 @@ function swiperInit() {
 			grabCursor: true,
 			spaceBetween: 0,
 		});
-
 	} else {
 		if (typeof swiper === 'object') swiper.destroy()
 	}
@@ -183,6 +182,13 @@ window.addEventListener('resize', () => {
 	sliderInit();
 	swiperInit();
 });
+
+document.addEventListener('DOMContentLoaded', ev => {
+	if (document.location.pathname.includes('projects') && !!slides.length){
+		[...slides].find((slide, index) => index === 1).click();
+	}
+})
+
 document.addEventListener('touchstart', handleTouchStart, false);
 document.addEventListener('touchmove', handleTouchMove, false);
 window.addEventListener('wheel', mouseWheelHandler, { once: true });
