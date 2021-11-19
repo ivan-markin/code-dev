@@ -277,6 +277,65 @@
       animation: arrow-animate 1s infinite alternate;
     }
 
+    .parameters-list {
+      margin-left: 6px;
+      padding: 0;
+      list-style: '- ';
+      font-size: 11px;
+      line-height: 1.56;
+    }
+
+    .caption-text {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 3vh;
+    }
+
+    .features-list {
+      list-style: none;
+      font-size: 9px;
+      font-weight: 600;
+    }
+
+    @media (min-width: 376px),
+    (orientation: landscape) {
+      h2 {
+        font-size: 24px;
+      }
+
+      .parameters-list {
+        font-size: 13px;
+      }
+
+      .address {
+        font-size: 13px;
+      }
+
+      .caption-text {
+        font-size: 16px;
+      }
+
+      .features-list {
+        font-size: 13px;
+      }
+
+      .features-list li {
+        margin-bottom: 3px;
+      }
+
+      .parameter-name {
+        font-size: 11px;
+      }
+
+      .parameter-value {
+        font-size: 24px;
+      }
+
+      .subtitle-main {
+        margin-bottom: 10px;
+      }
+    }
+
     @media (min-height: 780px) and (orientation: portrait) {
       h1 {
         font-size: 28px;
@@ -312,7 +371,7 @@
           <amp-img src="./assets/code-logo.svg" width="45" height="56" alt="CODE">
           </amp-img>
         </div>
-        <div class="subtitle-block" animate-in="fade-in" animate-in-duration="1.3s" animate-in-delay="0.4s">
+        <div class="subtitle-block subtitle-main" animate-in="fade-in" animate-in-duration="1.3s" animate-in-delay="0.4s">
           <h2>Отдельно стоящее здание</h2>
           <p class="parameter-value">в самом центре столицы</p>
         </div>
@@ -348,7 +407,7 @@
           </div>
           <div class="cta-container">
             <span>Получить презентацию</span>
-            <amp-img src="./assets/right-arrow.svg" class="link-arrow" width="50" height="20" alt="">
+            <amp-img src="./assets/right-arrow.svg" width="50" height="20" alt="">
             </amp-img>
             <a role="button" onclick="window.location='https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20Якиманка%202.0'" class="cta-button"></a>
             <!-- <a href="https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20Якиманка%202.0" class="cta-button"></a> -->
@@ -380,11 +439,11 @@
           <p class="parameter-value">м. Полянка / Третьяковская</p>
           <span style="font-size: 9px; align-self: flex-end;">7 мин.</span>
         </div>
-        <p style="font-size: 14px; font-weight: 600; margin-bottom: 3vh;" animate-in="fly-in-left" animate-in-duration="1s" animate-in-delay="0.6s">
-          Якиманка, небольшой культурно-деловой район в центре столицы
+        <p class="caption-text" style="margin-bottom: 3vh;" animate-in="fly-in-left" animate-in-duration="1s" animate-in-delay="0.6s">
+          Якиманка, небольшой культурно-деловой район в&nbsp;центре столицы
         </p>
         <p animate-in="fly-in-left" animate-in-duration="1s" animate-in-delay="0.8s" style="font-weight: 600; font-size: 14px;">Окружение:</p>
-        <ul style="margin-left: 6px; padding: 0; list-style: '- '; font-size: 11px;">
+        <ul class="parameters-list" style="margin-left: 6px; padding: 0;">
           <li animate-in="fly-in-left" animate-in-duration="1s" animate-in-delay="0.9s">Кремль</li>
           <li animate-in="fly-in-left" animate-in-duration="1s" animate-in-delay="1s">Красная площадь</li>
           <li animate-in="fly-in-left" animate-in-duration="1s" animate-in-delay="1.1s">Третьяковская галерея</li>
@@ -398,7 +457,7 @@
         <div class="bottom-block" animate-in="fly-in-bottom" animate-in-duration="1s" animate-in-delay="1.7s">
           <div class="cta-container">
             <span>Получить презентацию</span>
-            <amp-img src="./assets/right-arrow.svg" class="link-arrow" width="50" height="20" alt="">
+            <amp-img src="./assets/right-arrow.svg" width="50" height="20" alt="">
             </amp-img>
             <a role="button" onclick="window.location='https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20Якиманка%202.0'" class="cta-button"></a>
             <!-- <a href="https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20Якиманка%202.0" class="cta-button"></a> -->

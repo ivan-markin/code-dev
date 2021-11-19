@@ -279,6 +279,65 @@
       animation: arrow-animate 1s infinite alternate;
     }
 
+    .parameters-list {
+      margin-left: 6px;
+      padding: 0;
+      list-style: '- ';
+      font-size: 11px;
+      line-height: 1.56;
+    }
+
+    .caption-text {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 3vh;
+    }
+
+    .features-list {
+      list-style: none;
+      font-size: 9px;
+      font-weight: 600;
+    }
+
+    @media (min-width: 376px),
+    (orientation: landscape) {
+      h2 {
+        font-size: 24px;
+      }
+
+      .parameters-list {
+        font-size: 13px;
+      }
+
+      .address {
+        font-size: 13px;
+      }
+
+      .caption-text {
+        font-size: 16px;
+      }
+
+      .features-list {
+        font-size: 13px;
+      }
+
+      .features-list li {
+        margin-bottom: 3px;
+      }
+
+      .parameter-name {
+        font-size: 11px;
+      }
+
+      .parameter-value {
+        font-size: 24px;
+      }
+
+      .subtitle-main {
+        margin-bottom: 30px;
+      }
+    }
+
     @media (min-height: 780px) and (orientation: portrait) {
       h1 {
         font-size: 28px;
@@ -319,7 +378,7 @@
           </div>
         </div>
         <div class="subtitle-block" animate-in="fade-in" animate-in-duration="1.3s" animate-in-delay="0.4s">
-          <h2>ЖК “Савёловский Сити”</h2>
+          <h2 class="subtitle-main">ЖК “Савёловский Сити”</h2>
           <p class="parameter-value">1 160м<sup>2</sup></p>
         </div>
         <div class="parameters-block" animate-in="fly-in-left" animate-in-duration="1s" animate-in-delay="0.5s">
@@ -350,7 +409,7 @@
           </div>
           <div class="cta-container" animate-in="fly-in-bottom" animate-in-duration="1s" animate-in-delay="1.3s">
             <span>Получить презентацию</span>
-            <amp-img src="./assets/right-arrow.svg" class="link-arrow" width="50" height="20" alt="">
+            <amp-img class="link-arrow" src="./assets/right-arrow.svg" width="50" height="20" alt="">
             </amp-img>
             <a role="button" onclick="window.location='https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20by%20MOSS%20СавСити'" class="cta-button"></a>
             <!-- <a href="https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20by%20MOSS%20СавСити" class="cta-button"></a> -->
@@ -386,13 +445,13 @@
           <h2>Гостеприимство</h2>
           <p class="parameter-value">от MOSS Hospitality</p>
         </div>
-        <p style="font-size: 14px; font-weight: 600; margin-bottom: 3vh;" animate-in="fly-in-left" animate-in-duration="1s" animate-in-delay="0.6s">
+        <p class="caption-text" animate-in="fly-in-left" animate-in-duration="1s" animate-in-delay="0.6s">
           Коллаборация с MOSS Hospitality — залог
           особенных впечатлений для гостей CODE.
         </p>
-        <p style="font-size: 11px;" animate-in="fly-in-left" animate-in-duration="1s" animate-in-delay="0.8s">
+        <p style="font-size: 13px;" animate-in="fly-in-left" animate-in-duration="1s" animate-in-delay="0.8s">
           Уникальная атмосфера продумана до&nbsp;мельчайших деталей:</p>
-        <ul style="margin-left: 6px; padding: 0; list-style: '- '; font-size: 11px;">
+        <ul class="parameters-list" style="margin-left: 6px; padding: 0;">
           <li animate-in="fly-in-left" animate-in-duration="1s" animate-in-delay="0.9s">интерьерные ароматы</li>
           <li animate-in="fly-in-left" animate-in-duration="1s" animate-in-delay="1s">дизайнерская мебель</li>
           <li animate-in="fly-in-left" animate-in-duration="1s" animate-in-delay="1.1s">спешиалити-кофе</li>
@@ -406,7 +465,7 @@
         <div class="bottom-block" animate-in="fly-in-bottom" animate-in-duration="1s" animate-in-delay="1.5s">
           <div class="cta-container">
             <span>Получить презентацию</span>
-            <amp-img src="./assets/right-arrow.svg" class="link-arrow" width="50" height="20" alt="">
+            <amp-img class="link-arrow" src="./assets/right-arrow.svg" width="50" height="20" alt="">
             </amp-img>
             <a role="button" onclick="window.location='https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20by%20MOSS%20СавСити'" class="cta-button"></a>
             <!-- <a href="https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20by%20MOSS%20СавСити" class="cta-button"></a> -->
@@ -442,7 +501,7 @@
           <h2>Консьерж-сервис</h2>
           <p class="parameter-value">уровня элитных отелей</p>
         </div>
-        <ul style="margin-left: 6px; padding: 0; list-style: '- '; font-size: 11px; line-height: 1.56;">
+        <ul class="parameters-list">
           <li animate-in="fly-in-left" animate-in-duration="1s" animate-in-delay="0.6s">самые актуальные места в&nbsp;городе</li>
           <li animate-in="fly-in-left" animate-in-duration="1s" animate-in-delay="0.7s">интеграция в&nbsp;городские
             сообщества
@@ -463,7 +522,7 @@
         <div class="bottom-block" animate-in="fly-in-bottom" animate-in-duration="1s" animate-in-delay="1.3s">
           <div class="cta-container">
             <span>Получить презентацию</span>
-            <amp-img src="./assets/right-arrow.svg" class="link-arrow" width="50" height="20" alt="">
+            <amp-img class="link-arrow" src="./assets/right-arrow.svg" width="50" height="20" alt="">
             </amp-img>
             <a role="button" onclick="window.location='https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20by%20MOSS%20СавСити'" class="cta-button"></a>
             <!-- <a href="https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20by%20MOSS%20СавСити" class="cta-button"></a> -->
@@ -485,7 +544,7 @@
         <div class="bottom-block" animate-in="fly-in-bottom" animate-in-duration="1s" animate-in-delay="2.1s">
           <div class="cta-container">
             <span>Получить презентацию</span>
-            <amp-img src="./assets/right-arrow.svg" class="link-arrow" width="50" height="20" alt="">
+            <amp-img class="link-arrow" src="./assets/right-arrow.svg" width="50" height="20" alt="">
             </amp-img>
             <a role="button" onclick="window.location='https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20by%20MOSS%20СавСити'" class="cta-button"></a>
             <!-- <a href="https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20by%20MOSS%20СавСити" class="cta-button"></a> -->
@@ -512,7 +571,7 @@
         </div>
         <div class="extended-parameters-block">
           <div style="display: flex; flex-direction: column; justify-content: space-between; width: 50%;">
-            <ul style="margin: 0 0 15px 0; padding: 0; list-style: none; font-size: 9px; font-weight: 600;">
+            <ul class="features-list" style="margin: 0 0 15px 0; padding: 0;">
               <li animate-in="fly-in-left" animate-in-duration="1s" animate-in-delay="0.6s">Отделка и мебель
               </li>
               <li animate-in="fly-in-left" animate-in-duration="1s" animate-in-delay="0.7s">Эксплуатация</li>
@@ -572,7 +631,7 @@
         <div class="bottom-block" animate-in="fly-in-bottom" animate-in-duration="1s" animate-in-delay="2.1s">
           <div class="cta-container">
             <span>Получить презентацию</span>
-            <amp-img src="./assets/right-arrow.svg" class="link-arrow" width="50" height="20" alt="">
+            <amp-img class="link-arrow" src="./assets/right-arrow.svg" width="50" height="20" alt="">
             </amp-img>
             <a role="button" onclick="window.location='https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20by%20MOSS%20СавСити'" class="cta-button"></a>
             <!-- <a href="https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20by%20MOSS%20СавСити" class="cta-button"></a> -->
@@ -599,7 +658,7 @@
         </div>
         <div class="extended-parameters-block">
           <div style="display: flex; flex-direction: column; justify-content: space-between; width: 50%;">
-            <ul style="margin: 0 0 15px 0; padding: 0; list-style: none; font-size: 9px; font-weight: 600;">
+            <ul class="features-list" style="margin: 0 0 15px 0; padding: 0;">
               <li animate-in="fly-in-left" animate-in-duration="1s" animate-in-delay="0.6s">Индивидуальная
                 планировка
               </li>
@@ -671,11 +730,15 @@
       z-index: -1 !important;
     }
 
+    .sidebar::-webkit-scrollbar {
+      display: none;
+    }
+
     .sidebar.shown {
       display: flex !important;
       visibility: visible !important;
       opacity: 1 !important;
-      z-index: 999999 !important;
+      z-index: 9999 !important;
     }
 
     .sidebar-close {
@@ -688,22 +751,22 @@
       position: absolute;
       top: 20px;
       right: 20px;
+      z-index: 999999;
     }
 
     .sidebar-drawer {
       width: 100%;
-      height: 90vh;
+      height: 80vh;
       height: calc(var(--vh, 1vh) * 90);
-      max-width: 400px;
       position: absolute;
-      left: 50%;
       bottom: 0;
+      left: 50%;
       background-color: #343434;
       box-sizing: border-box;
       border-radius: 18px 18px 0 0;
       transform: translateY(100%) translateX(-50%);
       transition: all .3s;
-      z-index: 9999999;
+      z-index: 99999;
       padding: 60px 0 40px;
     }
 
@@ -729,9 +792,9 @@
       display: none;
     }
 
-    @media (max-width: 375px) {
+    @media (orientation: landscape) {
       .sidebar-drawer {
-        bottom: 5vh;
+        width: calc(100vh * 69 / 116);
       }
     }
   </style>
