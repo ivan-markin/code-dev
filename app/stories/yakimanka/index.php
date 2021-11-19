@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Code</title>
-  <link rel="canonical" href="index.html">
+  <link rel="canonical" href="./">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <style amp-boilerplate>
     body {
@@ -85,6 +85,16 @@
 
       to {
         transform: scale(1.1);
+      }
+    }
+
+    @keyframes arrow-animate {
+      0% {
+        transform: translateX(15px);
+      }
+
+      100% {
+        transform: translateX(0);
       }
     }
 
@@ -263,6 +273,10 @@
       border-radius: 6px;
     }
 
+    .link-arrow {
+      animation: arrow-animate 1s infinite alternate;
+    }
+
     @media (min-height: 780px) and (orientation: portrait) {
       h1 {
         font-size: 28px;
@@ -334,7 +348,7 @@
           </div>
           <div class="cta-container">
             <span>Получить презентацию</span>
-            <amp-img src="./assets/right-arrow.svg" width="50" height="20" alt="">
+            <amp-img src="./assets/right-arrow.svg" class="link-arrow" width="50" height="20" alt="">
             </amp-img>
             <a role="button" onclick="window.location='https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20Якиманка%202.0'" class="cta-button"></a>
             <!-- <a href="https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20Якиманка%202.0" class="cta-button"></a> -->
@@ -384,7 +398,7 @@
         <div class="bottom-block" animate-in="fly-in-bottom" animate-in-duration="1s" animate-in-delay="1.7s">
           <div class="cta-container">
             <span>Получить презентацию</span>
-            <amp-img src="./assets/right-arrow.svg" width="50" height="20" alt="">
+            <amp-img src="./assets/right-arrow.svg" class="link-arrow" width="50" height="20" alt="">
             </amp-img>
             <a role="button" onclick="window.location='https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20Якиманка%202.0'" class="cta-button"></a>
             <!-- <a href="https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20Якиманка%202.0" class="cta-button"></a> -->

@@ -7,23 +7,31 @@
   <link rel="canonical" href="index.html">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <!-- Facebook Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1600552393448588');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1600552393448588&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
-  
+  <script>
+    ! function(f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function() {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1600552393448588');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1600552393448588&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+
   <style amp-boilerplate>
     body {
       -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -347,7 +355,7 @@
           </div>
           <div class="cta-container" animate-in="fly-in-bottom" animate-in-duration="1s" animate-in-delay="1.3s">
             <span>Получить презентацию</span>
-            <amp-img src="./assets/right-arrow.svg" width="50" height="20" alt="">
+            <amp-img src="./assets/right-arrow.svg" class="link-arrow" width="50" height="20" alt="">
             </amp-img>
             <!-- <a role="button" onclick="window.location='https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20by%20MOSS%20СавСити'" class="cta-button"></a> -->
             <a href="https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20by%20MOSS%20СавСити" class="cta-button"></a>
@@ -400,7 +408,7 @@
         <div class="bottom-block" animate-in="fly-in-bottom" animate-in-duration="1s" animate-in-delay="1.5s">
           <div class="cta-container">
             <span>Получить презентацию</span>
-            <amp-img src="./assets/right-arrow.svg" width="50" height="20" alt="">
+            <amp-img src="./assets/right-arrow.svg" class="link-arrow" width="50" height="20" alt="">
             </amp-img>
             <!-- <a role="button" onclick="window.location='https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20by%20MOSS%20СавСити'" class="cta-button"></a> -->
             <a href="https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20by%20MOSS%20СавСити" class="cta-button"></a>
@@ -449,7 +457,7 @@
         <div class="bottom-block" animate-in="fly-in-bottom" animate-in-duration="1s" animate-in-delay="1.3s">
           <div class="cta-container">
             <span>Получить презентацию</span>
-            <amp-img src="./assets/right-arrow.svg" width="50" height="20" alt="">
+            <amp-img src="./assets/right-arrow.svg" class="link-arrow" width="50" height="20" alt="">
             </amp-img>
             <!-- <a role="button" onclick="window.location='https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20by%20MOSS%20СавСити'" class="cta-button"></a> -->
             <a href="https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20by%20MOSS%20СавСити" class="cta-button"></a>
@@ -471,7 +479,7 @@
         <div class="bottom-block" animate-in="fly-in-bottom" animate-in-duration="1s" animate-in-delay="2.1s">
           <div class="cta-container">
             <span>Получить презентацию</span>
-            <amp-img src="./assets/right-arrow.svg" width="50" height="20" alt="">
+            <amp-img src="./assets/right-arrow.svg" class="link-arrow" width="50" height="20" alt="">
             </amp-img>
             <!-- <a role="button" onclick="window.location='https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20by%20MOSS%20СавСити'" class="cta-button"></a> -->
             <a href="https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20by%20MOSS%20СавСити" class="cta-button"></a>
@@ -549,7 +557,7 @@
         <div class="bottom-block" animate-in="fly-in-bottom" animate-in-duration="1s" animate-in-delay="2.1s">
           <div class="cta-container">
             <span>Получить презентацию</span>
-            <amp-img src="./assets/right-arrow.svg" width="50" height="20" alt="">
+            <amp-img src="./assets/right-arrow.svg" class="link-arrow" width="50" height="20" alt="">
             </amp-img>
             <!-- <a role="button" onclick="window.location='https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20by%20MOSS%20СавСити'" class="cta-button"></a> -->
             <a href="https://wa.me/+79250329522?text=Здравствуйте!%20Пришлите%20пожалуйста%20презентацию%20по%20проекту%20CODE%20by%20MOSS%20СавСити" class="cta-button"></a>
