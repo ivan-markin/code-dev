@@ -186,6 +186,9 @@ window.addEventListener('resize', () => {
 document.addEventListener('DOMContentLoaded', ev => {
 	if (document.location.pathname.includes('projects') && !!slides.length){
 		[...slides].find((slide, index) => index === 1).click();
+		if (swiper){
+			swiper.slideTo(2)
+		}
 	}
 })
 
